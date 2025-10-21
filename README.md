@@ -35,23 +35,13 @@ Create a bank account simulator to practice designing and building a full, end-t
 
 ## 📁 Planned Package Structure
 
-bank.ui
-└─ BankUI # main method, menu system
+- **bank.ui** - BankUI 
 
-bank.domain
-├─ Account
-├─ CheckingAccount
-├─ SavingsAccount
-├─ CreditAccount
-└─ Status
+- **bank.domain** - Account - CheckingAccount - SavingsAccount - CreditAccount - Status
 
-bank.service
-└─ AccountService # business logic
+- **bank.service** - AccountService
 
-bank.storage
-├─ AccountRepository
-├─ FileAccountRepository
-└─ AccountSerializer
+- **bank.storage** - AccountRepository - FileAccountRepository - AccountSerializer
 
 ## 🧰 Tech Stack
 - **Language:** Java
