@@ -35,13 +35,15 @@ Create a bank account simulator to practice designing and building a full, end-t
 
 ## 📁 Planned Package Structure
 
-- **bank.ui** - BankUI 
+- **bank.ui** - Main - CLIMenu
 
 - **bank.domain** - Account - CheckingAccount - SavingsAccount - CreditAccount - Status
 
 - **bank.service** - AccountService
 
 - **bank.storage** - AccountRepository - FileAccountRepository - AccountSerializer
+
+---
 
 ## 🧰 Tech Stack
 - **Language:** Java
@@ -54,8 +56,7 @@ Create a bank account simulator to practice designing and building a full, end-t
 ## 🚧 Current Progress
 - Implemented `CLIMenu` class for user interaction.
 - Menu supports input handling and basic navigation.
-- Next step: add `BankUI` entry point and connect service logic.
-
+  
 ---
 
 ## ▶️ How to Run
