@@ -52,4 +52,11 @@ public class CLIMenu {
         System.out.println("Exiting Bank of Banking terminal.");
         terminalActive = false;
     }
+
+    //Personal learning - make class instance - this way I can modify the state of the class. (terminalActive).
+
+    //AI improvements   - moved menu options and user input to their own methods for cleanliness
+    //                  - switched input to a string and trimmed it to clean the input, multiple words will mess things
+    //                  up.
+    //                  - Menu loop - instead of exiting the program.
 }
