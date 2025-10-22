@@ -51,6 +51,14 @@ Create a bank account simulator to practice designing and building a full, end-t
 
 ---
 
-## 🚀 Status
-This project is currently in **planning and setup**.  
-Development will begin after the project structure and documentation are finalized.
+## 🚧 Current Progress
+- Implemented `CLIMenu` class for user interaction.
+- Menu supports input handling and basic navigation.
+- Next step: add `BankUI` entry point and connect service logic.
+
+---
+
+## ▶️ How to Run
+After building the project, the application will start from the `Main` class:
+```bash
+gradlew run
