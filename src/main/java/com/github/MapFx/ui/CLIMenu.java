@@ -1,9 +1,12 @@
 package com.github.MapFx.ui;
 
+import com.github.MapFx.service.AccountDatabase;
+
 import java.util.Scanner;
 
 // Handles the menu loop - read input and print options.
 public class CLIMenu {
+    private AccountDatabase database = new AccountDatabase();
     private boolean terminalActive = true;
     private final Scanner scanner = new Scanner(System.in);
 
@@ -35,15 +38,13 @@ public class CLIMenu {
     }
 
     public void createAccount(){
-        //TODO Utilizing a Template Method Pattern to create accounts of different types
-        //TODO Utilize an enum for account types
-        //TODO Create a service class that handles account creation
         System.out.println("\n=== Create Account ===");
         terminalActive = false;
+        //TODO menu loop for account creation - probably contain logic in another class
     }
 
     public void accessAccount(){
-        //TODO Create a database class that holds all of the accounts in local memory.
+        //TODO create search method in AccountDatabase class to find account by account number
         System.out.println("\n=== Access Account ===");
         terminalActive = false;
     }

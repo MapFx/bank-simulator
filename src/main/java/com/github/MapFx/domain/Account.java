@@ -8,14 +8,14 @@ public abstract class Account {
     private String customerName;
     private AccountType accountType;
 
-    public Account(int pin, double initialBalance, String customerName, AccountType accountType) {
+    public Account(int pin, double initialBalance, String customerName) {
         this.pin = pin;
         this.accountNumber = BankServices.generateCardNumber();
         this.balance = initialBalance;
         this.customerName = customerName;
         this.accountType = accountType;
     }
-    public Account(int pin, long accountNumber, double balance, String customerName, AccountType accountType) {
+    public Account(int pin, long accountNumber, double balance, String customerName) {
         this.pin = pin;
         this.accountNumber = accountNumber;
         this.balance = balance;
