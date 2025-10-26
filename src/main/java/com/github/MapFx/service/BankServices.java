@@ -38,15 +38,23 @@ public class BankServices {
     }
 
     // selectedAccount stores a reference to the account with the account number selected or null
-    public static Account lookUpAccount(String accountNumber) {
-        return AccountDatabase.getAccountByNumber(accountNumber);
-    }
+    //public static Account lookUpAccount(String accountNumber) {
+     //   return AccountDatabase.getAccountByNumber(accountNumber);
+    //}
 
     public Account getSelectedAccount() {
         return selectedAccount;
     }
 
+    public boolean isValidAccountNumber(String accountNumber) {
+        return accountDatabase.getAccountByNumber(accountNumber) != null;
+    }
+
     public void selectAccount(Account selectedAccount) {
         this.selectedAccount = selectedAccount;
+    }
+
+    public void selectAccount(String accountNumber) {
+        this.selectedAccount = accountDatabase.getAccountByNumber(accountNumber);
     }
 }

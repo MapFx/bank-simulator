@@ -9,5 +9,7 @@ public class CreditAccount extends Account{
 
     public CreditAccount(String customerName, String accountNumber, int pin, double balance) {
         super(customerName, accountNumber, pin, balance);
+        super.setAccountType(AccountType.CREDIT);
+
     }
 }

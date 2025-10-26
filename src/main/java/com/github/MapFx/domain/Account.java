@@ -31,6 +31,10 @@ public abstract class Account {
         return pin;
     }
 
+    public String getPinString(){
+        return String.valueOf(pin);
+    }
+
     public String getCustomerName() {
         return customerName;
     }
@@ -40,7 +44,9 @@ public abstract class Account {
     }
     public void printAccount() {
         System.out.println("\nCustomer Name: " + this.customerName);
-        System.out.println("Account Type: " + this.accountType.toString());
+        if(this.accountType != null) {
+            System.out.println("Account Type: " + this.accountType.toString());
+        }
         System.out.println("Account Number: " + this.accountNumber);
         System.out.println("Account Balance: " + this.balance + "\n");
 

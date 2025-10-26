@@ -22,7 +22,7 @@ public class AccountDatabase {
         accounts.add(account);
     }
 
-    public static Account getAccountByNumber(String accountNumber){
+    public Account getAccountByNumber(String accountNumber){
         if(accounts==null){
             return null;
         }
