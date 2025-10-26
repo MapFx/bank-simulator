@@ -15,4 +15,14 @@ public enum AccountType {
     public String toString() {
         return label;
     }
+
+    public static boolean isValid(String s){
+        if(s == null) return false;
+
+        for (AccountType t : AccountType.values()) {
+            if(s.equalsIgnoreCase(t.label)) return true;
+        }
+
+        return false;
+    }
 }
