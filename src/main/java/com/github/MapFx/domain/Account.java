@@ -39,11 +39,10 @@ public abstract class Account {
         return accountNumber;
     }
     public void printAccount() {
-        System.out.println("Customer Name: " + this.customerName);
-        System.out.println("-----------------------------");
+        System.out.println("\nCustomer Name: " + this.customerName);
         System.out.println("Account Type: " + this.accountType.toString());
         System.out.println("Account Number: " + this.accountNumber);
-        System.out.println("Account Balance: " + this.balance);
+        System.out.println("Account Balance: " + this.balance + "\n");
 
     }
 }

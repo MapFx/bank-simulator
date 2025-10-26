@@ -5,11 +5,11 @@ import com.github.MapFx.domain.*;
 
 public class BankServices {
     AccountDatabase accountDatabase;
-    Account activeAccount;
+    Account selectedAccount;
 
     public BankServices(AccountDatabase accountDatabase){
         this.accountDatabase = accountDatabase;
-        activeAccount = null;
+        selectedAccount = null;
     }
 
     public static String generateCardNumber() {
@@ -23,27 +23,30 @@ public class BankServices {
         return sb.toString();
     }
 
-    public void createAccount(String customerName, String accountType, int pin) {
+    // Create account and adds it to the local database & stores the reference to said account
+    public void openAccount(String customerName, String accountType, int pin) {
         accountType = accountType.toUpperCase();
-        System.out.println("Account Type : " + accountType);
-        int initialBalance = 0;
-
+        selectedAccount = null;
         switch (accountType) {
-            case "CHECKING" -> accountDatabase.appendAccount(new CheckingAccount(customerName,pin));
-            case "SAVINGS" -> accountDatabase.appendAccount(new SavingsAccount(customerName,pin));
-            case "CREDIT" -> accountDatabase.appendAccount(new CreditAccount(customerName,pin));
+            case "CHECKING" -> selectedAccount = new CheckingAccount(customerName,pin);
+            case "SAVINGS" -> selectedAccount = new SavingsAccount(customerName,pin);
+            case "CREDIT" -> selectedAccount = new CreditAccount(customerName,pin);
             default -> System.out.println("Invalid account type provided");
         }
+
+        if(selectedAccount != null) accountDatabase.appendAccount(selectedAccount);
     }
 
+    // selectedAccount stores a reference to the account with the account number selected or null
     public static Account lookUpAccount(String accountNumber) {
         return AccountDatabase.getAccountByNumber(accountNumber);
     }
 
-    public Account getActiveAccount() {
-        return activeAccount;
+    public Account getSelectedAccount() {
+        return selectedAccount;
     }
-    public void setActiveAccount(Account activeAccount) {
-        this.activeAccount = activeAccount;
+
+    public void selectAccount(Account selectedAccount) {
+        this.selectedAccount = selectedAccount;
     }
 }

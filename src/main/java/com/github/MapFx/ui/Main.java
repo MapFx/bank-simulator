@@ -11,6 +11,5 @@ public class Main {
         accountDatabase.initialize();
         CLIMenu menu = new CLIMenu(bankServices);
         menu.open();
-
     }
 }
