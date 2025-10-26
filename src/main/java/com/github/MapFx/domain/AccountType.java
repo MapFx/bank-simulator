@@ -2,8 +2,8 @@ package com.github.MapFx.domain;
 
 public enum AccountType {
     CHECKING("Checking"),
-    CREDIT("Credit"),
-    DEBIT("Debit");
+    SAVINGS("Savings"),
+    CREDIT("Credit");
 
     private final String label;
 

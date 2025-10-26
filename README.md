@@ -55,7 +55,10 @@ Create a bank account simulator to practice designing and building a full, end-t
 
 ## 🚧 Current Progress
 - Implemented `CLIMenu` class for user interaction.
-- Menu supports input handling and basic navigation.
+- Added `AccountDatabase` to store accounts in memory
+- Added `AccountSerializer` for csv conversion
+- Added `Account` abstract class and `CheckingAccount` class
+- 
   
 ---
 

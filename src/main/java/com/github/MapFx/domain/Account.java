@@ -3,19 +3,19 @@ import com.github.MapFx.service.BankServices;
 
 public abstract class Account {
     private int pin;
-    private long accountNumber;
+    private String accountNumber;
     private double balance;
     private String customerName;
     private AccountType accountType;
 
-    public Account(int pin, double initialBalance, String customerName) {
+    public Account(String customerName, int pin) {
         this.pin = pin;
         this.accountNumber = BankServices.generateCardNumber();
-        this.balance = initialBalance;
+        this.balance = 0;
         this.customerName = customerName;
         this.accountType = accountType;
     }
-    public Account(int pin, long accountNumber, double balance, String customerName) {
+    public Account(String customerName, String accountNumber, int pin, double balance) {
         this.pin = pin;
         this.accountNumber = accountNumber;
         this.balance = balance;
@@ -23,6 +23,21 @@ public abstract class Account {
         this.accountType = accountType;
     }
 
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
     public void printAccount() {
         System.out.println("Customer Name: " + this.customerName);
         System.out.println("-----------------------------");

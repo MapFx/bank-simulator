@@ -1,14 +1,13 @@
 package com.github.MapFx.domain;
 
-import com.github.MapFx.service.BankServices;
-
 public class CheckingAccount extends Account{
 
-    public CheckingAccount(int pin, double initialBalance, String customerName) {
-        super(pin, initialBalance,customerName);
+    public CheckingAccount(String customerName, int pin) {
+        super(customerName, pin);
+        super.setAccountType(AccountType.CHECKING);
     }
 
-    public CheckingAccount(int pin, long accountNumber, double balance, String customerName) {
-        super(pin, accountNumber, balance,customerName);
+    public CheckingAccount(String customerName, String accountNumber, int pin, double balance) {
+        super(customerName, accountNumber, pin, balance);
     }
 }

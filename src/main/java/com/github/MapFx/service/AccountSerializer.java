@@ -20,14 +20,15 @@ public class AccountSerializer {
 
         //For testing purposes:
         ArrayList<Account> accounts = new ArrayList<>();
-        accounts.add(new CheckingAccount(4202,7775,"Chaz McClutzky"));
-        accounts.add(new CheckingAccount(3311,1461,"Duke Nukem"));
-        accounts.add(new CheckingAccount(6969,4646,"Guy Doom"));
-        accounts.add(new CheckingAccount(3724,99996,"John Maester"));
-        accounts.add(new CheckingAccount(1951,0,"Alfredo Leatherchest"));
-        accounts.add(new CheckingAccount(4333,37,"Mario Marioson"));
-        accounts.add(new CheckingAccount(1111,137,"Doug Drinkwater"));
-        accounts.add(new CheckingAccount(0000,132323,"I. C. Weiner"));
+        accounts.add(new CheckingAccount("Gog Gog","1234567812345678",1234,12440));
+        accounts.add(new CheckingAccount("Chaz McClutzky", 4202));
+        accounts.add(new CheckingAccount("Duke Nukem", 3311));
+        accounts.add(new CheckingAccount("Guy Doom", 6969));
+        accounts.add(new CheckingAccount("John Maester", 3724));
+        accounts.add(new CheckingAccount("Alfredo Leatherchest", 1951));
+        accounts.add(new CheckingAccount("Mario Marioson", 4333));
+        accounts.add(new CheckingAccount("Doug Drinkwater", 1111));
+        accounts.add(new CheckingAccount("I. C. Weiner", 0000));
 
         return accounts;
     }
